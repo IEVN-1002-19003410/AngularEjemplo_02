@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3">
+            <label class="form-label" for="">Numero1</label>
+            <input type="text" class="form-control" [(ngModel)]="num1" name="num1" placeholder="Numero1">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="">Numero2</label>
+            <input type="text" class="form-control" [(ngModel)]="num2" name="num2" placeholder="Numero2">
+        </div>
+        <div class="mb-3">
+            <div>
+                <label name="opcion">
+                    <input type="radio" name="opcion" >suma
+                    <input type="radio" name="opcion" >resta
+                    <input type="radio" name="opcion" >division
+                    <input type="radio" name="opcion" >multiplicacion
+                </label>
+            </div>
+            <button (click)="sumar()" class="btnbtn-primary">Suma</button>
+            <button (click)="resta()" class="btnbtn-primary">Resta</button>
+            <button (click)="division()" class="btnbtn-primary">Division</button>
+            <button (click)="multiplicacion()" class="btnbtn-primary">Multiplicacion</button>
+        </div>
+    </div>
+    <div class="col-6">
+        <h2>Resultado es: {{resultado}}</h2>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Iproducto } from '../iproducto';
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,11 @@ export class ProductListComponent {
   muestraImg:boolean=true;
   listFilter:string='';
 
-  productos:any[]=[
+  showImage():void{
+    this.muestraImg=! this.muestraImg;
+  }
+
+  productos:Iproducto[]=[
     {
       "productoId":1,
       "Modelo":"Sentra",
@@ -20,7 +25,7 @@ export class ProductListComponent {
       "year":"febrero 3 2020",
       "precio":120000,
       "Marca":"Nissan",
-      "Color":"Verde",
+      "Color":"Naranja",
       "imagenUrl":"https://upload.wikimedia.org/wikipedia/commons/9/92/Nuevo_Nissan_Sentra_2023.webp"
     },
     {
@@ -40,7 +45,7 @@ export class ProductListComponent {
       "year": "enero 2 2023",
       "precio":135000,
       "Marca":"Kia",
-      "Color":"Azul",
+      "Color":"Blanco",
       "imagenUrl":"https://upload.wikimedia.org/wikipedia/commons/6/60/2018_Kia_Rio_EX_-_Side.jpg"
     }
   ]
