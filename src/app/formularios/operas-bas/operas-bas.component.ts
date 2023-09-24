@@ -10,16 +10,20 @@ export class OperasBasComponent {
   num1='';
   num2='';
   resultado:number=0;
-  opcion='';
+  opcion:number=0;
 
-  sumar(){
-    this.resultado=parseInt(this.num1) + parseInt(this.num2);
-  }resta(){
-    this.resultado=parseInt(this.num1) - parseInt(this.num2);
-  }division(){
-    this.resultado=parseInt(this.num1) / parseInt(this.num2);
-  }multiplicacion(){
-    this.resultado=parseInt(this.num1) * parseInt(this.num2);
+  resultadoOpcion(){
+    if(this.opcion == 1) {
+      this.resultado=parseInt(this.num1) + parseInt(this.num2);
+    }
+    if(this.opcion == 2) {
+      this.resultado=parseInt(this.num1) - parseInt(this.num2);
+    }
+    if (this.opcion == 3) {
+      this.resultado=parseInt(this.num1) / parseInt(this.num2);
+    }
+    if (this.opcion == 4) {
+      this.resultado=parseInt(this.num1) * parseInt(this.num2);
+    }
   }
-
 }
