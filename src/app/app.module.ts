@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
@@ -9,6 +9,10 @@ import { OperasBasComponent } from './formularios/operas-bas/operas-bas.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Suma2Component } from './formularios/suma2/suma2.component';
 import { MenuComponent } from './menu/menu/menu.component';
+import { MaterialModule } from './material/material/material.module';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,17 @@ import { MenuComponent } from './menu/menu/menu.component';
     ProductFilterPipe,
     OperasBasComponent,
     Suma2Component,
-    MenuComponent
+    MenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,18 +1,28 @@
 <mat-toolbar color="primary">
-
     <span>
-        <a mat-button routerLink="">
-            <mat-icon>fact_check
-            </mat-icon> PWA-1002
+        <a mat-button routerLink="Home"><mat-icon>fact_check
+</mat-icon> PWA-1002
         </a>
     </span>
-    <div>
-        <a routerLink="operasBas" mat-button>OperasBas</a>
+   <!-- <div>
+        <a routerLink="operasBas" matButton>operasBas</a>
+    </div>-->
+    <div class="container">
+    
+        <a mat-list-item routerLinkActive="active" routerLink="ProductList">
+            <mat-icon color="accent">add</mat-icon>
+            Lista de Productos
+        </a>
+        <a mat-list-item routerLinkActive="active" routerLink="Suma2">
+            <mat-icon color="accent">add</mat-icon>
+            Sumas
+        </a>
+        <a mat-list-item routerLinkActive="active" routerLink="OperasBas">
+            <mat-icon color="accent">add</mat-icon>
+            Operaciones
+        </a>
     </div>
-    <div>
-        <a mat-button>Tabla</a>
-    </div>
-    <div>
-        <a mat-button>Temperatura</a>
-    </div>
+    
+   
 </mat-toolbar>
+<router-outlet></router-outlet>
